@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Dolphins Swimming Pool",
+  title: "DOLPHINS Swimming Pool",
   description: "The ultimate destination for elite swim training and unforgettable private events.",
 };
 

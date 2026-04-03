@@ -12,12 +12,12 @@ export default function Navbar() {
         <div style={{ position: 'relative', width: '40px', height: '40px' }}>
           <Image 
             src="/dolphins-logo.jpg" 
-            alt="Dolphins Logo" 
+            alt="DOLPHINS Logo" 
             fill
             style={{ objectFit: 'contain', borderRadius: '8px' }} 
           />
         </div>
-        <span>Dolphins</span>
+        <span>DOLPHINS</span>
       </div>
       <div className="nav-links">
         <Link href="/" className={pathname === '/' ? 'active' : ''}>Home</Link>

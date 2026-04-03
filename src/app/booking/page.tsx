@@ -5,7 +5,6 @@ import "./booking.css";
 export default function BookingPage() {
   const [bookingType, setBookingType] = useState("Individual Lane");
   const [swimmers, setSwimmers] = useState(1);
-  const [selectedLane, setSelectedLane] = useState("1");
 
   return (
     <div className="booking-container">
@@ -96,21 +95,6 @@ export default function BookingPage() {
           <div className="step-num">3</div>
           Pool Preferences
         </div>
-        <div className="form-group" style={{ marginBottom: "1.5rem" }}>
-          <label>Select Lane (1-8)</label>
-          <div className="lanes-row" style={{ marginTop: "0.5rem" }}>
-            {[1, 2, 3, 4, 5, 6, 7, 8].map(lane => (
-              <div 
-                key={lane} 
-                className={`lane-btn ${selectedLane === lane.toString() ? "active" : ""}`}
-                onClick={() => setSelectedLane(lane.toString())}
-              >
-                {lane}
-              </div>
-            ))}
-          </div>
-        </div>
-        
         <div className="form-group" style={{ marginBottom: "1rem" }}>
           <label>Number of Swimmers</label>
           <div className="swimmer-counter" style={{ marginTop: "0.5rem" }}>
