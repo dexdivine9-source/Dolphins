@@ -69,7 +69,7 @@ export default function Home() {
       </section>
 
       <section className="features-section">
-        <div className="service-category" style={{marginBottom: '1rem'}}>WHY AQUABOOK?</div>
+        <div className="service-category" style={{marginBottom: '1rem'}}>WHY DOLPHINS?</div>
         <h2>Everything for the<br/>perfect session</h2>
         <div className="features-grid">
           <div className="feature-card">

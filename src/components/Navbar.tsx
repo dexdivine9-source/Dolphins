@@ -17,7 +17,7 @@ export default function Navbar() {
             style={{ objectFit: 'contain', borderRadius: '8px' }} 
           />
         </div>
-        <span>AquaBook</span>
+        <span>Dolphins</span>
       </div>
       <div className="nav-links">
         <Link href="/" className={pathname === '/' ? 'active' : ''}>Home</Link>
