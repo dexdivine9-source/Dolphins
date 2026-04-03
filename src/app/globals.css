@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg-color: #030712; /* Deep dark blue/black */
+  --bg-color: #030712;
   --text-primary: #ffffff;
   --text-secondary: #94a3b8;
   --accent-cyan: #00f0ff;
@@ -63,8 +63,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
   .nav-links {
-    display: none; /* simple mobile hide for now */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
   }
 }
 
@@ -127,7 +134,6 @@ body {
   justify-content: center;
   text-align: center;
   padding: 8rem 5% 4rem;
-  /* Split layout simulation using CSS linear gradients over an image */
   background: 
     linear-gradient(to right, rgba(5, 10, 25, 0.85) 50%, rgba(15, 10, 40, 0.75) 50%),
     url('https://images.unsplash.com/photo-1576013551627-11971f64b423?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
@@ -159,6 +165,7 @@ body {
   margin-bottom: 1.5rem;
   background: linear-gradient(to right, #ffffff, var(--accent-cyan));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 }
@@ -170,7 +177,7 @@ body {
   line-height: 1.6;
 }
 
-/* SPLIT CARDS (Image 2) */
+/* SPLIT CARDS */
 .cards-section {
   padding: 6rem 5%;
   display: flex;
@@ -273,6 +280,7 @@ body {
   margin-bottom: 1rem;
   background: linear-gradient(to right, #ffffff, var(--accent-cyan));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -295,26 +303,6 @@ body {
   overflow: hidden;
 }
 
-.feature-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease;
-}
-
-.feature-card:hover::before {
-  transform: translateX(100%);
-}
-
-.feature-card:hover {
-  border-color: rgba(0, 240, 255, 0.3);
-  box-shadow: 0 0 30px rgba(0, 240, 255, 0.05);
-  transform: translateY(-5px);
-}
-
 .feature-card h4 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
@@ -327,7 +315,7 @@ body {
   line-height: 1.6;
 }
 
-/* HOW IT WORKS (Simplified icons for now) */
+/* HOW IT WORKS */
 .how-it-works {
   padding: 4rem 5%;
   text-align: center;
@@ -366,28 +354,11 @@ body {
   border: 1px solid rgba(0, 240, 255, 0.2);
 }
 
-.step h5 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.step p {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-}
-
-
-/* SCHEDULE (Image 3) */
+/* SCHEDULE */
 .schedule-section {
   padding: 6rem 5%;
   text-align: center;
   background: #02040a;
-}
-
-.schedule-section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 4rem;
-  font-weight: 700;
 }
 
 .schedule-cards {
@@ -415,17 +386,6 @@ body {
   transform: translateY(-5px);
 }
 
-.schedule-card h4 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.2rem;
-}
-
-.schedule-card p {
-  color: var(--accent-cyan);
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
 .badge {
   position: absolute;
   bottom: -12px;
@@ -440,7 +400,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* CTA Card */
 .cta-wrapper {
   display: flex;
   justify-content: center;
@@ -458,33 +417,4 @@ body {
   box-shadow: 0 0 50px rgba(0, 240, 255, 0.05) inset, 0 20px 40px rgba(0,0,0,0.5);
   position: relative;
   overflow: hidden;
-}
-
-.cta-card::after {
-  content: '';
-  position: absolute;
-  top: -50%; left: -50%; width: 200%; height: 200%;
-  background: radial-gradient(circle, rgba(0,240,255,0.05) 0%, transparent 70%);
-  z-index: 0;
-}
-
-.cta-card > * {
-  position: relative;
-  z-index: 1;
-}
-
-.cta-card h3 {
-  font-size: 2.5rem;
-  margin: 1.5rem 0 1rem;
-}
-
-.cta-card p {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  margin-bottom: 2.5rem;
-}
-
-.cta-card .btn-primary {
-  font-size: 1.1rem;
-  padding: 0.8rem 2rem;
 }

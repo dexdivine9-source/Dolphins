@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "next";
+import { useState } from "react";
 import Link from "next/link";
 import "./dashboard.css";
 
